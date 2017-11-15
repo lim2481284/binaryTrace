@@ -10,13 +10,36 @@ function getProductById(id){
   return {};
 }
 
+function addItemToOrder(item){
+  for(var i = 0; i<order.length; i++){
+    if(order[i].item.id == parseInt(item.id,10) ){
+      order[i].quantity++
+      return
+    }
+  }
+
+  order.push({
+    item:item,
+    quantity:1
+  });
+  return
+}
+
+function getTotalPrice(){
+  var sum = 0.00;
+  for(var i = 0; i<order.length; i++){
+    sum+=order[i].item.price*order[i].quantity;
+  }
+  return sum.toFixed(2);
+}
+
 $(document).ready(function(){
 
   api.getProducts(function(data){
     var items =[];
     products = data;
-    data.map(function(o){
-      items.push('<div class="col-sm-3 desc galleryItem">\
+    items = data.map(function(o){
+      return('<div class="col-sm-3 desc galleryItem">\
         <div class="project-wrapper">\
           <div class="project">\
             <div class="photo-wrapper">\
@@ -36,7 +59,25 @@ $(document).ready(function(){
 
     $('.catalogue-item').on('click',function(e){
       var item = getProductById($(this).data('id'));
-      console.log(item);
+      addItemToOrder(item);
+
+      var items = order.map(function(o){
+        return('<tr>\
+          <td> '+o.item.name+' </td>\
+          <td> '+parseFloat(o.item.price*o.quantity).toFixed(2)+' </td>\
+          <td> '+parseInt(o.quantity)+' </td>\
+        </tr>')
+      });
+      items.unshift("<tr class='rowHeader'>\
+        <th> Item Name </th>\
+        <th> Price (RM) </th>\
+        <th> Qty </th>\
+      </tr>")
+
+      $('.itemList').html(items);
+      $('.orderTotal').html(getTotalPrice());
     });
   });
+
+  
 });
