@@ -100,7 +100,7 @@ $(document).ready(function(){
       </tr>");
       $('.orderTotal').html("0.00");
       trackingTask = tracking.track(video, tracker, { camera: true });
-      $('statusBox').fadeOut();
+      $('.statusBox').fadeOut();
     });
 
     console.log(JSON.stringify(orderItem) );

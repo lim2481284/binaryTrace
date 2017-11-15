@@ -24,7 +24,7 @@ function snapshot() {
     canvas.height = video.videoHeight;
 
     ctx.drawImage(video, 0, 0);
-    document.querySelector('#saida').src = canvas.toDataURL('image/jpeg', 1.0);
+    //document.querySelector('#saida').src = canvas.toDataURL('image/jpeg', 1.0);
     var faceImageUrl=canvas.toDataURL('image/jpeg', 1.0)
     faceDetect(faceImageUrl)
   }
@@ -35,6 +35,8 @@ $(document).ready(function(){
         navigator.getUserMedia({audio: false, video: true}, handleVideo, videoError);
     }
 
+    $('.statusBox').hide();
+
     trackingTask = tracking.track(video, tracker, { camera: true });
     tracker.on('track', function(event) {
       if (event.data.length!=0){
@@ -42,7 +44,7 @@ $(document).ready(function(){
           trackingTask.stop();
           console.log('Tracking Stopped');
         }, 100);
-        $('statusBox').fadeIn();
+        $('.statusBox').fadeIn();
         //snapshot();
       }
     });
