@@ -1,5 +1,6 @@
 var products = [];
 var order =[];
+var customer_id=null;
 
 function getProductById(id){
   for(var i = 0; i<products.length; i++){
@@ -79,5 +80,28 @@ $(document).ready(function(){
     });
   });
 
-  
+  $('.payBtn').on('click',function(){
+    var items = order.map(function(o){
+      return {product_id:o.item.id,quantity:o.quantity}
+    });
+
+    var orderItem = {
+      customer_id:customer_id,
+      products:items,
+      timestamp:Date.now()
+    }
+    api.createOrder(orderItem, function(){
+      alert('Order Created');
+      order =[];
+      $('.itemList').html("<tr class='rowHeader'>\
+        <th> Item Name </th>\
+        <th> Price (RM) </th>\
+        <th> Qty </th>\
+      </tr>");
+      $('.orderTotal').html("0.00");
+    });
+
+    console.log(JSON.stringify(orderItem) );
+  });
+
 });

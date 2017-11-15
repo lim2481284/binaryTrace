@@ -3,9 +3,9 @@ var headers = {
     "app_key"         : "ca64c4ea184e5e4ffed0349bf10922cb"
 };
 
+var currentFaceId = "";
 
-
-function faceDetect(image){   
+function faceDetect(image){
     var payload  = { "image" : image };
     var url = "http://api.kairos.com/detect";
 
@@ -16,25 +16,41 @@ function faceDetect(image){
         dataType: "json"
     }).done(function(response){
         if (response.images){
-            console.log("Got Face");
+            //console.log("Got Face");
             faceReco(image);
             //Need to compare with gallery
             //if no exist, send to backend, if exist, enroll
         }
         else if (response.Errors){
-            console.log("No face")
+            console.log("No face");
+            $(document).trigger('captureFace');
         }
     });
 }
 
 function faceEnroll(image,id=null){
+    var newUser = id==null;
     id?id:id=makeid();
-    var payload  = { 
+    var payload  = {
         "image" : image,
         "subject_id":id,
         "gallery_name":"whaddahack"
     };
     var url = "http://api.kairos.com/enroll";
+
+    $.get(api.url+'customer',{face_id:id}).done(function(data){
+
+      if(data.length==0){
+        //if no user face id found create customer
+        $.post(api.url+'customer',{face_id:id}).done(function(data){
+          customer_id = data[0].id;
+        });
+
+      }else{
+        customer_id = data[0].id;
+      }
+
+    });
 
     $.ajax(url, {
         headers  : headers,
@@ -43,12 +59,13 @@ function faceEnroll(image,id=null){
         dataType: "json"
     }).done(function(response){
         console.log(response)
-        //Here need to bind the faceid to current 
+        $(document).trigger('captureFace');
+        //Here need to bind the faceid to current
     });
 }
 
 function faceReco(image){
-    var payload  = { 
+    var payload  = {
         "image" : image,
         "gallery_name":"whaddahack"
     };
@@ -60,6 +77,7 @@ function faceReco(image){
         data: JSON.stringify(payload),
         dataType: "json"
     }).done(function(response){
+        console.log(response);
         if (response.images[0].transaction.status=="success"){
             console.log("Face matches")
             var id=response.images[0].transaction.subject_id;
@@ -72,7 +90,7 @@ function faceReco(image){
 }
 
 function faceRemove(id){
-    var payload  = { 
+    var payload  = {
         "subject_id":id,
         "gallery_name":"whaddahack"
     };
@@ -89,7 +107,7 @@ function faceRemove(id){
 }
 
 function viewGallery(){
-    var payload  = { 
+    var payload  = {
         "gallery_name":"whaddahack"
     };
     var url = "http://api.kairos.com/gallery/view";
@@ -105,7 +123,7 @@ function viewGallery(){
 }
 
 function viewSubject(id){
-    var payload  = { 
+    var payload  = {
         "gallery_name":"whaddahack",
         "subject_id":id
     };
