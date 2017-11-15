@@ -25,7 +25,7 @@
 	background:#222222;
 	border-bottom:lightgray;
 }
-.header{   
+.header{
 	min-height: 70px;
     padding: 10px 25px 10px 20px;
 }
@@ -60,7 +60,7 @@ ul.sidebar-menu li a{
 	min-height:100vh;
 	height:auto;
 	background:#f6f6f6;
-	
+
 }
 .site-min-height{
 	min-height:100vh;
@@ -121,7 +121,7 @@ video{
 }
 .statusBox label{
 
-	
+
 	font-weight:600;
 }
 .statusBox img{
@@ -173,7 +173,7 @@ video{
 td:first-child{
 	text-align:left;
 	width:70%;
-	
+
 }
 td:second-child{
 	text-align:right;
@@ -189,7 +189,7 @@ th{
 }
 
 .rowHeader{
-	
+
 }
 
 .galleryItem{
@@ -201,4 +201,12 @@ th{
 
 ul.sidebar-menu li ul.sub li a:hover{
 	color:black;
+}
+.payBtn{
+  width:100%;
+  margin-top:15%;
+}
+
+.fancybox{
+  cursor:pointer;
 }
