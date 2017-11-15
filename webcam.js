@@ -18,13 +18,13 @@ function videoError(e) {
 
 function snapshot() {
   if (localMediaStream) {
-    canvas.width = video.clientWidth;
-    canvas.height = video.clientHeight;
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
 
     ctx.drawImage(video, 0, 0);
     document.querySelector('#saida').src = canvas.toDataURL('image/jpeg', 1.0);
     var faceImageUrl=canvas.toDataURL('image/jpeg', 1.0)
-    faceDetect(faceImageUrl)
+    //faceDetect(faceImageUrl)
   }
 }
 
@@ -33,8 +33,9 @@ $(document).ready(function(){
         navigator.getUserMedia({audio: false, video: true}, handleVideo, videoError);
     }
 
-    //setInterval(function(){snapshot();},5000)
-
+    setInterval(function(){snapshot();},5000)
+    //snapshot();
+    //$(document).on('captureFace',function(){snapshot();});
 
     // Demo
     /*$(snapshotbut).click(function(){
