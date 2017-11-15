@@ -6,8 +6,8 @@ $(document).ready(function(){
 		});		
 		$(".purchaseBtn").attr('class',' purchaseBtn active');
 		$(".attributeBtn").attr('class','attributeBtn');
-		$(".purchaseSection").show();
-		$(".attributeSection").hide();
+		$(".purchaseSection").slideDown(1000);
+		$(".attributeSection").slideUp(1000);
 	 });
 	 
 	 $(".attributeBtn").click(function(){
@@ -17,7 +17,7 @@ $(document).ready(function(){
 		});	
 		$(".attributeBtn").attr('class','attributeBtn active');
 		$(".purchaseBtn").attr('class','purchaseBtn');
-		$(".purchaseSection").hide();
-		$(".attributeSection").show();
+		$(".purchaseSection").slideUp(1000);
+		$(".attributeSection").slideDown(1000);
 	 });
 });
