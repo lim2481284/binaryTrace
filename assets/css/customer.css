@@ -2,6 +2,40 @@
 	padding:5% !important;
 }
 
+hr{
+	display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid gray;
+    margin: 1em 0;
+	width:50%;
+    padding: 0; 
+}
+.topMenu{
+	
+}
+.itemList,.totalPrice{
+	width:50%;
+	color:gray;
+	font-size:50% !important;
+	margin:auto;
+}
+
+th:first-child,
+td:first-child{
+	padding-left:5%;
+}
+a{
+	font-size:140%;
+	cursor:pointer;
+	padding-right:4%;
+	padding-left:4%;
+}
+
+.active{
+	font-weight:700;
+	color:#2E2E2E;
+}
 .customerHeader{
 	font-size:200%;
 	color:black;
@@ -9,6 +43,7 @@
 	font-weight:400;
 	text-transform:uppercase;
 	color:#2E9AFE;
+
 
 }
 .labelBold{
