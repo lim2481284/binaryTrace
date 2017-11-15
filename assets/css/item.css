@@ -1,19 +1,50 @@
-p{
-	color:gray;
+.imageSection{
+	margin-bottom:2%;
 }
 
-.small{
-	color:gray !important;
+
+.imageInput{
+	text-align: center;
 }
 
-.attributeTable{
-	width:80%;
-	color:gray;
-	
+
+
+.file-input-wrapper {
+	margin:auto;
+	width: 200px;
+	height: 40px;
+	overflow: hidden;
+	position: relative;
+}
+.file-input-wrapper > input[type="file"] {
+	font-size: 200px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	opacity: 0;
+
+}
+.file-input-wrapper > .btn-file-input {
+	display: inline-block;
+	width: 200px;
+	height: 40px;
+    background: #3DBAD9;
+    color: white;
+    outline: none;
+    border: none;	
 }
 
-.wrapper{
-	padding-left:5%;	
-	padding-right:5%;
+.profileFileUpload{
+	cursor:pointer;
 }
 
+#uploadedImage{
+	max-height:100px;
+	max-width:100px;	
+}
+
+.imageSection{
+	margin-bottom:5%;
+	margin-top:5%;
+	text-align:center;
+}

@@ -16,6 +16,8 @@
     <link href="assets/css/style-responsive.css" rel="stylesheet">
 	<link href="assets/css/style-responsive.css" rel="stylesheet">
 	<link href="assets/css/custom.css" rel="stylesheet">
+	<link href="assets/css/item.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.5/sweetalert2.css" rel="stylesheet">
   </head>
 
   <body>
@@ -94,9 +96,50 @@
       <!--main content start-->
       <section id="main-content">
 		 <section class="wrapper site-min-height">
-		 
+			<br><br>
+			<div class="form-panel">
+			  <h4 class="mb"> ADD NEW PRODUCT</h4>
+			  <form class="form-horizontal style-form" method="get">
+				  <div class="form-group">
+					  <div class="col-sm-12 imageInput">
+						 <div class="col-sm-12 imageSection ">
+							<img id="uploadedImage" src="#" alt="your image" />
+						 </div>
+						 
+						 <div class="col-sm-12 ">
+							<div class="file-input-wrapper">
+							  <button class="btn-file-input">Upload File</button>
+							  <input type="file" name="file"  class='profileFileUpload' onchange="readURL(this);"/>
+							</div>
+							 <br><br>
+						 </div>
+						
+					  </div>
+				  </div>
+				
+				  <div class="form-group">
+					  <label class="col-sm-2 col-sm-2 control-label">Name</label>
+					  <div class="col-sm-10">
+						  <input type="text" class="form-control" required>
+					  </div>
+				  </div>
+				  <div class="form-group">
+					  <label class="col-sm-2 col-sm-2 control-label">Short Description</label>
+					  <div class="col-sm-10">
+						  <input type="text" class="form-control" required>
+					  </div>
+				  </div>
+				  <div class="form-group">
+					  <label class="col-sm-2 col-sm-2 control-label">Attribute</label>
+					  <div class="col-sm-10 attributeSection">
+							
+						  <button type='button' class='btn btn-default addAttribute'>Add attribute</button>
+					  </div>
+				  </div>
+				<button class='btn btn-info addProductBtn'>Add product </button>		
+			  </form>
+		  </div>			
 	
-			
 		</section>
       </section>
 
@@ -121,29 +164,10 @@
     <!--script for this page-->
 	<script src="assets/js/zabuto_calendar.js"></script>	
 	<script src="assets/js/main.js"></script>
-	    <script src="assets/js/chart-master/Chart.js"></script>
-    <script src="assets/js/chartjs-conf.js"></script>
-    
-	
-	<!-- Sample video code 
-	<script>
-	  var errorCallback = function(e) {
-		console.log('Reeeejected!', e);
-	  };
+	<script src="assets/js/chart-master/Chart.js"></script>
+	<script src="assets/js/chartjs-conf.js"></script>
+	<script src="assets/js/fileUploader.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.5/sweetalert2.js"></script>
 
-	  // Not showing vendor prefixes.
-	  navigator.getUserMedia({video: true, audio: true}, function(localMediaStream) {
-		var video = document.querySelector('video');
-		video.src = window.URL.createObjectURL(localMediaStream);
-
-		// Note: onloadedmetadata doesn't fire in Chrome when using it with getUserMedia.
-		// See crbug.com/110938.
-		video.onloadedmetadata = function(e) {
-		  // Ready to go. Do some stuff.
-		};
-	  }, errorCallback);
-	</script>
-	-->
-	
   </body>
 </html>
