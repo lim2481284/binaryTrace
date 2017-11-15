@@ -85,6 +85,8 @@ function faceReco(image){
         }
         else{
             faceEnroll(image)
+            $('.Success').fadeOut();
+            $('.Register').fadeIn();
         }
     });
 }

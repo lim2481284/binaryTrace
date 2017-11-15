@@ -26,6 +26,8 @@ function snapshot() {
     ctx.drawImage(video, 0, 0);
     //document.querySelector('#saida').src = canvas.toDataURL('image/jpeg', 1.0);
     var faceImageUrl=canvas.toDataURL('image/jpeg', 1.0)
+    $('.Failed').fadeOut();
+    $('.Success').fadeIn();
     faceDetect(faceImageUrl)
   }
 }
@@ -44,8 +46,10 @@ $(document).ready(function(){
           trackingTask.stop();
           console.log('Tracking Stopped');
         }, 100);
-        $('.statusBox').fadeIn();
-        //snapshot();
+        //$('.statusBox').fadeIn();
+        snapshot();
+      } else {
+        $('.Failed').fadeIn();
       }
     });
     //setInterval(function(){snapshot();},5000)
