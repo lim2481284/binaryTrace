@@ -16,6 +16,7 @@
     <link href="assets/css/style-responsive.css" rel="stylesheet">
 	<link href="assets/css/style-responsive.css" rel="stylesheet">
 	<link href="assets/css/custom.css" rel="stylesheet">
+	<link href="assets/css/dashboard.css" rel="stylesheet">
   </head>
 
   <body>
@@ -66,12 +67,12 @@
                           <span>Item Management</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="general.html">Add Item </a></li>
-                          <li><a  href="buttons.html">Item Database</a></li>
+                          <li><a  href="item.html">Add Item </a></li>
+                          <li><a  href="store.html">Item Database</a></li>
                       </ul>
                   </li>
 				  <li class="sub-menu">
-                      <a class="" href="index.html">
+                      <a class="" href="settings.html">
                           <i class="fa fa-cogs"></i>
                           <span>Settings</span>
                       </a>
@@ -94,47 +95,135 @@
       <!--main content start-->
       <section id="main-content">
 		 <section class="wrapper site-min-height">
+
+			  <br><br><br><br>
+				
+			  <div class="row mt">
+				<div class="col-md-4 col-sm-4 mb">
+					<div class="white-panel pn">
+						<div class="white-header">
+							<h5>TOP 5 ATTRIBUTE</h5>
+						</div>
+						<div class="row">
+							<div class="col-sm-6 col-xs-6"></div>
+						</div>
+						<div class="centered">
+							<center>
+							<table class='attributeTable'>
+								<tr>
+									<th> Attribute</td>
+									<th> Number </td>
+								</tr>
+								<tr>
+									<td> Wallet</td>
+									<td> 200 </td>
+								</tr>
+								<tr>
+									<td> Sweet</td>
+									<td> 160 </td>
+								</tr>
+								<tr>
+									<td> Spicy </td>
+									<td> 50 </td>
+								</tr>
+								<tr>
+									<td> Electronic device</td>
+									<td> 20 </td>
+								</tr>
+								<tr>
+									<td> Book</td>
+									<td> 10 </td>
+								</tr>
+							</table>
+							</center>
+						</div>
+					</div>
+				</div><!-- /col-md-4 -->
+				
+
+				<div class="col-md-4 col-sm-4 mb">
+					<div class="white-panel pn">
+						<div class="white-header">
+							<h5>TOP PRODUCT</h5>
+						</div>
+						<div class="row">
+							<div class="col-sm-6 col-xs-6 goleft">
+								<p><i class="fa fa-heart"></i> 122</p>
+							</div>
+							<div class="col-sm-6 col-xs-6"></div>
+						</div>
+						<div class="centered">
+								<img src="assets/img/product.png" width="120">
+						</div>
+					</div>
+				</div><!-- /col-md-4 -->
+				
+				<div class="col-md-4 mb">
+					<!-- WHITE PANEL - TOP USER -->
+					<div class="white-panel pn">
+						<div class="white-header">
+							<h5>TOP USER</h5>
+						</div>
+						<p><img src="assets/img/ui-zac.jpg" class="img-circle" width="80"></p>
+						<p><b>GG Chew</b></p>
+						<div class="row">
+							<div class="col-md-6">
+								<p class="small mt">PURCHASE SINCE</p>
+								<p>2012</p>
+							</div>
+							<div class="col-md-6">
+								<p class="small mt">TOTAL SPEND</p>
+								<p>RM 4700.60</p>
+							</div>
+						</div>
+					</div>
+				</div><!-- /col-md-4 -->
+			
+			</div><!-- /row -->
+			
+								 
+		 
 			<div class="border-head">
-			  <h3>VISITS</h3>
-		  </div>
-			<div class="custom-bar-chart">
-			  <ul class="y-axis">
-				  <li><span>10.000</span></li>
-				  <li><span>8.000</span></li>
-				  <li><span>6.000</span></li>
-				  <li><span>4.000</span></li>
-				  <li><span>2.000</span></li>
-				  <li><span>0</span></li>
-			  </ul>
-			  <div class="bar">
-				  <div class="title">JAN</div>
-				  <div class="value tooltips" data-original-title="8.500" data-toggle="tooltip" data-placement="top">85%</div>
+			  <h3>CUSTOMER VISITS</h3>
 			  </div>
-			  <div class="bar ">
-				  <div class="title">FEB</div>
-				  <div class="value tooltips" data-original-title="5.000" data-toggle="tooltip" data-placement="top">50%</div>
+				<div class="custom-bar-chart">
+				  <ul class="y-axis">
+					  <li><span>10.000</span></li>
+					  <li><span>8.000</span></li>
+					  <li><span>6.000</span></li>
+					  <li><span>4.000</span></li>
+					  <li><span>2.000</span></li>
+					  <li><span>0</span></li>
+				  </ul>
+				  <div class="bar">
+					  <div class="title">JAN</div>
+					  <div class="value tooltips" data-original-title="8.500" data-toggle="tooltip" data-placement="top">85%</div>
+				  </div>
+				  <div class="bar ">
+					  <div class="title">FEB</div>
+					  <div class="value tooltips" data-original-title="5.000" data-toggle="tooltip" data-placement="top">50%</div>
+				  </div>
+				  <div class="bar ">
+					  <div class="title">MAR</div>
+					  <div class="value tooltips" data-original-title="6.000" data-toggle="tooltip" data-placement="top">60%</div>
+				  </div>
+				  <div class="bar ">
+					  <div class="title">APR</div>
+					  <div class="value tooltips" data-original-title="4.500" data-toggle="tooltip" data-placement="top">45%</div>
+				  </div>
+				  <div class="bar">
+					  <div class="title">MAY</div>
+					  <div class="value tooltips" data-original-title="3.200" data-toggle="tooltip" data-placement="top">32%</div>
+				  </div>
+				  <div class="bar ">
+					  <div class="title">JUN</div>
+					  <div class="value tooltips" data-original-title="6.200" data-toggle="tooltip" data-placement="top">62%</div>
+				  </div>
+				  <div class="bar">
+					  <div class="title">JUL</div>
+					  <div class="value tooltips" data-original-title="7.500" data-toggle="tooltip" data-placement="top">75%</div>
+				  </div>
 			  </div>
-			  <div class="bar ">
-				  <div class="title">MAR</div>
-				  <div class="value tooltips" data-original-title="6.000" data-toggle="tooltip" data-placement="top">60%</div>
-			  </div>
-			  <div class="bar ">
-				  <div class="title">APR</div>
-				  <div class="value tooltips" data-original-title="4.500" data-toggle="tooltip" data-placement="top">45%</div>
-			  </div>
-			  <div class="bar">
-				  <div class="title">MAY</div>
-				  <div class="value tooltips" data-original-title="3.200" data-toggle="tooltip" data-placement="top">32%</div>
-			  </div>
-			  <div class="bar ">
-				  <div class="title">JUN</div>
-				  <div class="value tooltips" data-original-title="6.200" data-toggle="tooltip" data-placement="top">62%</div>
-			  </div>
-			  <div class="bar">
-				  <div class="title">JUL</div>
-				  <div class="value tooltips" data-original-title="7.500" data-toggle="tooltip" data-placement="top">75%</div>
-			  </div>
-		  </div>
 			
 		</section>
       </section>

@@ -16,6 +16,7 @@
     <link href="assets/css/style-responsive.css" rel="stylesheet">
 	<link href="assets/css/style-responsive.css" rel="stylesheet">
 	<link href="assets/css/custom.css" rel="stylesheet">
+	<link href="assets/css/store.css" rel="stylesheet">
   </head>
 
   <body>
@@ -48,7 +49,7 @@
               <ul class="sidebar-menu" id="nav-accordion">
 
                   <li class="mt">
-                      <a class="active" href="index.html">
+                      <a class="" href="index.html">
                           <i class="fa fa-desktop"></i>
                           <span>Cashier</span>
                       </a>
@@ -61,7 +62,7 @@
                   </li>
 
                   <li class="sub-menu">
-                      <a href="javascript:;" >
+                      <a href="javascript:;" class='active' >
                           <i class="fa fa-th"></i>
                           <span>Item Management</span>
                       </a>
@@ -95,92 +96,39 @@
       <section id="main-content">
 		 <section class="wrapper site-min-height">
 		 
-
-			
-			<!-- Item gallery -->
-			<div class='leftContent col-sm-8'>
-				<div class="row mt">
-				
-					<!-- Add your gallery image here -->
-					<div class="col-sm-3 desc galleryItem">
-						<div class="project-wrapper">
-							<div class="project">
-								<div class="photo-wrapper">
-									<div class="photo">
-										<a class="fancybox" href="assets/img/portfolio/port04.jpg"><img class="img-responsive" src="assets/img/portfolio/port04.jpg" alt=""></a>
-									</div>
-									<div class="overlay"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					
-				</div>
-				
-			</div>
-
-			<!-- Customer Info -->
-			<div class='rightContent col-sm-4'>
-				<div class='camSection col-sm-12'>
-					<div class='camBox'> 
-						<!-- Sample status
-						
-						<div class='statusBox Success'> 
-							<label><img src='assets/img/success.png'/> User Captured  </label>
-						</div>
-						<div class='statusBox Failed'> 
-							<label> <img src='assets/img/failed.png'/> No User Detected  </label>
-						</div>
-						<div class='statusBox Register'> 
-							<label><img src='assets/img/register.png'/> New User Registered  </label>
-						</div>
-						
-						-->
-						<div class='statusBox Success'> 
-							<label><img src='assets/img/success.png'/> User Captured  </label>
-						</div>	
-						
-						<video autoplay></video>
-					</div>
-				</div>
-				<div class='infoMenuSection col-sm-12'>
-					<a class='attributeBtn active'>Attribute  </a>
-					|
-					<a class='purchaseBtn'>Purchase </a>
-					
-				</div>
-				<div class='infoSection attributeSection col-sm-12'>
-				  <div class="panel-body text-center">
-					  <canvas id="radar" height="300" width="400"></canvas>
-				  </div>
-				</div>
-				<div class=' purchaseSection col-sm-12'>
-				  <div class="panel-body text-center">
-					<table class='itemList'>
-						<tr class='rowHeader'>
-							<th> Item Name </td>
-							<th> Price (RM) </td>
-						</tr>
-						<tr>
-							<td> Item Name </td>
-							<td> 1,50 </td>
-						</tr>
-						<tr>
-							<td> Item Name </td>
-							<td> 1,50 </td>
-						</tr>
-					</table>
-					<table class='totalPrice'>
-						<tr>
-							<td>  </td>
-							<td> 200 </td>
-						</tr>
-					</table>
-				  </div>
-				</div>
-			</div>
-			
+			<table class='storeTable'>
+				<tr>
+					<th> Item Name</th>
+					<th> Attribute</th>
+					<th> Number </th>
+				</tr>
+				<tr>
+					<td> Gex</td>
+					<td> Wallet</td>
+					<td> 200 </td>
+				</tr>
+				<tr>
+					<td> Magnum</td>
+					<td> Sweet</td>
+					<td> 160 </td>
+				</tr>
+				<tr>
+					<td> Pizzahut </td>
+					<td> Spicy </td>
+					<td> 50 </td>
+				</tr>
+				<tr>
+					<td> Pernasonic fan</td>
+					<td> Electronic device</td>
+					<td> 20 </td>
+				</tr>
+				<tr>
+					<td> Super dictionay</td>
+					<td> Book</td>
+					<td> 10 </td>
+				</tr>
+			</table>
+		
 		</section>
       </section>
 
