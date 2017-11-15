@@ -42,7 +42,8 @@ $(document).ready(function(){
           trackingTask.stop();
           console.log('Tracking Stopped');
         }, 100);
-        snapshot();
+        $('statusBox').fadeIn();
+        //snapshot();
       }
     });
     //setInterval(function(){snapshot();},5000)
