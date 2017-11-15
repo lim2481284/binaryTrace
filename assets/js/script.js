@@ -99,6 +99,7 @@ $(document).ready(function(){
         <th> Qty </th>\
       </tr>");
       $('.orderTotal').html("0.00");
+      trackingTask = tracking.track(video, tracker, { camera: true });
     });
 
     console.log(JSON.stringify(orderItem) );

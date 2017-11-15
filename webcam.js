@@ -2,6 +2,8 @@
 var video = document.querySelector('#videoElement');
 var canvas = document.querySelector('canvas');
 var ctx = canvas.getContext('2d');
+var tracker = new tracking.ObjectTracker('face');
+var trackingTask ={};
 var localMediaStream = null;
 
 navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
@@ -24,7 +26,7 @@ function snapshot() {
     ctx.drawImage(video, 0, 0);
     document.querySelector('#saida').src = canvas.toDataURL('image/jpeg', 1.0);
     var faceImageUrl=canvas.toDataURL('image/jpeg', 1.0)
-    //faceDetect(faceImageUrl)
+    faceDetect(faceImageUrl)
   }
 }
 
@@ -33,7 +35,17 @@ $(document).ready(function(){
         navigator.getUserMedia({audio: false, video: true}, handleVideo, videoError);
     }
 
-    setInterval(function(){snapshot();},5000)
+    trackingTask = tracking.track(video, tracker, { camera: true });
+    tracker.on('track', function(event) {
+      if (event.data.length!=0){
+        setTimeout(function () {
+          trackingTask.stop();
+          console.log('Tracking Stopped');
+        }, 100);
+        snapshot();
+      }
+    });
+    //setInterval(function(){snapshot();},5000)
     //snapshot();
     //$(document).on('captureFace',function(){snapshot();});
 
