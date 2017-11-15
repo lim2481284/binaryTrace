@@ -44,10 +44,12 @@ function faceEnroll(image,id=null){
         //if no user face id found create customer
         $.post(api.url+'customer',{face_id:id}).done(function(data){
           customer_id = data[0].id;
+          $('.loader').fadeOut();
         });
 
       }else{
         customer_id = data[0].id;
+        $('.loader').fadeOut();
       }
 
     });
@@ -81,12 +83,14 @@ function faceReco(image){
         if (response.images[0].transaction.status=="success"){
             console.log("Face matches")
             var id=response.images[0].transaction.subject_id;
+            $('.Success').fadeOut();
+            $('.SuccessMatch').fadeIn();
             faceEnroll(image,id)
         }
         else{
+          $('.Success').fadeOut();
+          $('.Register').fadeIn();
             faceEnroll(image)
-            $('.Success').fadeOut();
-            $('.Register').fadeIn();
         }
     });
 }

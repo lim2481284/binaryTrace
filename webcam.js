@@ -38,6 +38,7 @@ $(document).ready(function(){
     }
 
     $('.statusBox').hide();
+    $('.loader').hide();
 
     trackingTask = tracking.track(video, tracker, { camera: true });
     tracker.on('track', function(event) {
@@ -46,7 +47,7 @@ $(document).ready(function(){
           trackingTask.stop();
           console.log('Tracking Stopped');
         }, 100);
-        //$('.statusBox').fadeIn();
+        $('.loader').fadeIn();
         snapshot();
       } else {
         $('.Failed').fadeIn();
