@@ -1,0 +1,30 @@
+.storeTable{
+	margin-top:5%;
+	width:100%;
+}
+
+.wrapper{
+	padding-left:5%;	
+	padding-right:5%;
+}
+
+
+td:first-child{
+	text-align:left;
+	width:70%;
+	
+	
+}
+td:second-child{
+	text-align:right;
+	width:30%;
+}
+td{
+	padding-top:2%;
+	padding-bottom:2%;
+}
+
+th{
+	padding-bottom:3%;
+	border-bottom:1px solid gray;
+}

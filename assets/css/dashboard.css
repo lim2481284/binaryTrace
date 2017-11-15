@@ -1,0 +1,19 @@
+p{
+	color:gray;
+}
+
+.small{
+	color:gray !important;
+}
+
+.attributeTable{
+	width:80%;
+	color:gray;
+	
+}
+
+.wrapper{
+	padding-left:5%;	
+	padding-right:5%;
+}
+
