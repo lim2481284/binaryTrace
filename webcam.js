@@ -1,5 +1,5 @@
 
-var video = document.querySelector('#videoElement');   
+var video = document.querySelector('#videoElement');
 var canvas = document.querySelector('canvas');
 var ctx = canvas.getContext('2d');
 var localMediaStream = null;
@@ -37,7 +37,7 @@ $(document).ready(function(){
 
 
     // Demo
-    $(snapshotbut).click(function(){
+    /*$(snapshotbut).click(function(){
         snapshot();
     })
     $(comparebut).click(function(){
@@ -51,5 +51,5 @@ $(document).ready(function(){
     });
     $(viewsubbut).click(function(){
         viewSubject($(removeID).val())
-    })
+    })*/
 })
