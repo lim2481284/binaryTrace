@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>BinaryTrace</title>
+    <title>FaceCloud</title>
 
     <!-- core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -23,49 +23,89 @@
 
   <section id="container" >
 	 <center>
-		<div class='col-sm-12 customerHeader'>
-			<label class='labelBold'>Recommended Item</label>
-			<br>
-			 FOR YOU 
-			 <br><br><br><br>
+		<div class='topMenu'>
+			<a class='recommended active'> Recommended </a>
+			|
+			<a class='purchase'> Purchase </a>
 		</div>
+		<br>
+		<hr>
+		<br><br>
+		<div class='recommendedSection'>
+			<div class='col-sm-12 customerHeader topHeader'>
+				<label class='labelBold'>Recommended Item</label>
+				<br>
+				 FOR YOU 
+				 <br><br><br><br>
+			</div>
 		
-		<div class='col-sm-12 customerHeader'>
-		<div id="portfolio">
-		 
-		  <div class="tile scale-anm web all">
-				<img src="assets/img/portfolio/port01.jpg" alt="" />
-		  </div>
-		  <div class="tile scale-anm bcards all">
-			<img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/jti-icons_08-300x172.jpg" alt="" />
-		  </div>
-		  <div class="tile scale-anm web all">
-			<img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/emi_haze-300x201.jpg" alt="" />
-		  </div>
-		  <div class="tile scale-anm web all">
-					<img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/codystretch-300x270.jpg" alt="" />
-		  </div>
-		  <div class="tile scale-anm flyers all">
-			<img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/jti-icons_08-300x172.jpg" alt="" />
-		  </div>
-		  <div class="tile scale-anm flyers all">
-			<img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/transmission_01-300x300.jpg" alt="" />
-		  </div>
-		  <div class="tile scale-anm web all">
-				<img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/the-ninetys-brand_02-300x300.jpg" alt="" />
-		  </div>
-		  <div class="tile scale-anm bcards all">
-					<img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/15-dia_1092-1-300x300.jpg" alt="" />
-		  </div>
-	
-		  <div class="tile scale-anm bcards all">
-				  <img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/emi_haze-300x201.jpg" alt="" />  
-		  </div>
-		  <div class="tile scale-anm web all">
-					<img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/transmission_01-300x300.jpg" alt="" />
-		  </div> 
+			<div class='col-sm-12 customerHeader'>
+			<div id="portfolio">
+			 
+			  <div class="tile scale-anm web all">
+					<img src="assets/img/portfolio/port01.jpg" alt="" />
+			  </div>
+			  <div class="tile scale-anm bcards all">
+				<img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/jti-icons_08-300x172.jpg" alt="" />
+			  </div>
+			  <div class="tile scale-anm web all">
+				<img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/emi_haze-300x201.jpg" alt="" />
+			  </div>
+			  <div class="tile scale-anm web all">
+						<img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/codystretch-300x270.jpg" alt="" />
+			  </div>
+			  <div class="tile scale-anm flyers all">
+				<img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/jti-icons_08-300x172.jpg" alt="" />
+			  </div>
+			  <div class="tile scale-anm flyers all">
+				<img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/transmission_01-300x300.jpg" alt="" />
+			  </div>
+			  <div class="tile scale-anm web all">
+					<img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/the-ninetys-brand_02-300x300.jpg" alt="" />
+			  </div>
+			  <div class="tile scale-anm bcards all">
+						<img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/15-dia_1092-1-300x300.jpg" alt="" />
+			  </div>
+		
+			  <div class="tile scale-anm bcards all">
+					  <img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/emi_haze-300x201.jpg" alt="" />  
+			  </div>
+			  <div class="tile scale-anm web all">
+						<img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/transmission_01-300x300.jpg" alt="" />
+			  </div> 
 
+			</div>
+			</div>
 		</div>
+		<div class='purchaseSection'>
+			<div class='col-sm-12 customerHeader topHeader'>
+				<label class='labelBold'>Purchased Item</label>
+				<br> <br><br>
+				 <table class='itemList'>
+					<tr class='rowHeader'>
+						<th> Item Name </th>
+						<th> Qty </th>
+						 <th> Price (RM) </th>
+					</tr>
+					<tr>
+						<td> Item Name </td>
+						<td> 1,50 </td>
+						<td> 1,50 </td>
+					</tr>
+					<tr>
+						<td> Item Name </td>
+						<td> 1,50 </td>
+						<td> 1,50 </td>
+					</tr>
+				</table>
+				<table class='totalPrice'>
+					<tr>
+						<td> Total </td>
+						<td style='width:8%'>  </td>
+						<td class='orderTotal'>123</td>
+					</tr>
+				</table>
+			</div>
 		</div>
 	</center>
   </section>
@@ -87,9 +127,7 @@
     <!--script for this page-->
 	<script src="assets/js/zabuto_calendar.js"></script>	
 	<script src="assets/js/main.js"></script>
-	    <script src="assets/js/chart-master/Chart.js"></script>
-    <script src="assets/js/chartjs-conf.js"></script>
-    
+	<script src="assets/js/customer.js"></script>
 	
 	<!-- Sample video code 
 	<script>
