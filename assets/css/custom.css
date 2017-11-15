@@ -1,0 +1,195 @@
+.searchBtn {
+    width: 50%;
+    box-sizing: border-box;
+    border: 0px solid #ccc;
+    border-radius: 4px;
+    font-size: 12px;
+    background-color: white;
+    background-image: url('../img/searchicon.png');
+    background-position: 8px 8px;
+	background-size: 15px 15px;
+    background-repeat: no-repeat;
+    padding:7px 0px 7px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+.searchBtn:focus {
+    width: 100%;
+	outline:none;
+}
+
+.notify-row{
+	width:400px;
+}
+.black-bg{
+	background:#222222;
+	border-bottom:lightgray;
+}
+.header{   
+	min-height: 70px;
+    padding: 10px 25px 10px 20px;
+}
+.logo b{
+	color:#2E9AFE;
+	padding-right:2px;
+	margin-top:30px;
+}
+
+a.logo{
+	margin-top:16px;
+}
+#sidebar{
+	background:#fefefe;
+	box-shadow: 0px 0px 5px #BDBDBD;
+}
+ul.sidebar-menu li a.active{
+	background:#58D3F7;
+
+}
+
+ul.sidebar-menu li ul.sub li{
+	background:transparent;
+	color:#848484;
+}
+
+ul.sidebar-menu li a{
+	color:#585858;
+}
+.rightContent{
+	border-left:1px solid lightgray;
+	min-height:100vh;
+	height:auto;
+	background:#f6f6f6;
+	
+}
+.site-min-height{
+	min-height:100vh;
+}
+.camBox{
+	width:100%;
+	height:290px;
+	background:black;
+	margin:0;
+	margin-top:6%;
+	position:relative;
+}
+
+video{
+	width:100%;
+}
+.statusBox{
+	position:absolute;
+	z-index:10;
+	background:white;
+	width:100%;
+	height:0px;
+	bottom:0;
+	text-align:center;
+	line-height:60px;
+	vertical-align:center;
+	transition:2s;
+	animation: statusAnimation 6s ;
+	color:white;
+	font-size:0%;
+	opacity:0;
+
+}
+@keyframes statusAnimation {
+    0%   {
+		height:0px;
+		font-size:100%;
+		display:none;
+		opacity:0;
+	}
+	50%{
+		height:60px;
+		font-size:100%;
+		display:block;
+		opacity:0.8;
+	}
+	70%{
+		height:60px;
+		font-size:100%;
+		display:block;
+		opacity:0.8;
+	}
+    100% {
+		height:0px;
+		font-size:100%;
+		opacity:0;
+	}
+}
+.statusBox label{
+
+	
+	font-weight:600;
+}
+.statusBox img{
+	filter:brightness(500%);
+	width:20px;
+}
+.Success{
+	background:#00FF40;
+}
+.Register{
+	background:#FFBF00;
+}
+.Failed{
+	background:#FF0000;
+}
+
+.infoMenuSection{
+	text-align:center;
+	padding-top:5%;
+}
+
+.infoMenuSection a{
+	cursor:pointer;
+	color:gray;
+}
+
+.infoMenuSection a:hover{
+	opacity:0.6;
+}
+
+.infoMenuSection .active{
+	font-weight:bold;
+	color:#2E9AFE;
+}
+
+.purchaseSection{
+	display:none;
+}
+.itemList,
+.totalPrice{
+	margin-top:5%;
+	width:100%;
+}
+.itemList{
+	border-bottom:1px solid gray;
+}
+
+
+td:first-child{
+	text-align:left;
+	width:70%;
+	
+}
+td:second-child{
+	text-align:right;
+	width:30%;
+}
+td{
+	padding-top:2%;
+	padding-bottom:2%;
+}
+
+th{
+	padding-bottom:5%;
+}
+
+.rowHeader{
+	
+}
+
+
