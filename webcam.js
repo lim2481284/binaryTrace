@@ -48,6 +48,7 @@ $(document).ready(function(){
           console.log('Tracking Stopped');
         }, 100);
         $('.loader').fadeIn();
+        $('.Failed').fadeOut();
         snapshot();
       } else {
         $('.Failed').fadeIn();

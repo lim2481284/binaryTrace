@@ -39,17 +39,20 @@ function faceEnroll(image,id=null){
     var url = "http://api.kairos.com/enroll";
 
     $.get(api.url+'customer',{face_id:id}).done(function(data){
-
-      if(data.length==0){
+      if(data.length>0){
+        customer_id = data[0].id;
+        $('.Success').fadeOut();
+        $('.SuccessMatch').fadeIn();
+        $('.loader').fadeOut();
+      }else{
         //if no user face id found create customer
         $.post(api.url+'customer',{face_id:id}).done(function(data){
-          customer_id = data[0].id;
+          console.log(data);
+          customer_id = data.id;
+          $('.Success').fadeOut();
+          $('.Register').fadeIn();
           $('.loader').fadeOut();
         });
-
-      }else{
-        customer_id = data[0].id;
-        $('.loader').fadeOut();
       }
 
     });
@@ -83,8 +86,6 @@ function faceReco(image){
         if (response.images[0].transaction.status=="success"){
             console.log("Face matches")
             var id=response.images[0].transaction.subject_id;
-            $('.Success').fadeOut();
-            $('.SuccessMatch').fadeIn();
             faceEnroll(image,id)
         }
         else{
