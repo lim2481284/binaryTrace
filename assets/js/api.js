@@ -12,7 +12,7 @@ function POST(url, data, success, err=console.error){
 }
 
 function Api(){
-  this.url = "http://192.168.3.245:3000/";
+  this.url = "http://172.20.10.3:3000/";
 
   this.getProducts = function(success){
     $.get(this.url+'product',{}).done((data)=>success(data));
