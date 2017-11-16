@@ -47,16 +47,11 @@ function faceEnroll(image,id=null){
 
         api.getUserOrders(customer_id,function(data){
           var items = [];
-          items.unshift("<tr class='rowHeader'>\
-            <th> Item Name </th>\
-            <th> Price (RM) </th>\
-            <th> Qty </th>\
-          </tr>");
 
           for(var i =0; i<data.length; i++){
             data[i].products.map(function(o){
               var product = getProductById(o.product_id);
-              items.shift('<tr>\
+              items.push('<tr>\
                 <td> '+product.name+' </td>\
                 <td> '+o.quantity+' </td>\
                 <td> '+parseFloat(product.price*parseInt(o.quantity,10)).toFixed(2)+' </td>\
@@ -64,6 +59,13 @@ function faceEnroll(image,id=null){
             });
           }
 
+          items.unshift("<tr class='rowHeader'>\
+            <th> Item Name </th>\
+            <th> Price (RM) </th>\
+            <th> Qty </th>\
+          </tr>");
+
+          //alert(JSON.stringify(data) );
           $('.itemList2').html(items);
         });
 
@@ -79,16 +81,10 @@ function faceEnroll(image,id=null){
           api.getUserOrders(customer_id,function(data){
             var items = [];
 
-            items.unshift("<tr class='rowHeader'>\
-              <th> Item Name </th>\
-              <th> Price (RM) </th>\
-              <th> Qty </th>\
-            </tr>");
-
             for(var i =0; i<data.length; i++){
               data[i].products.map(function(o){
           			var product = getProductById(o.product_id);
-          			items.shift('<tr>\
+          			items.push('<tr>\
           				<td> '+product.name+' </td>\
           				<td> '+o.quantity+' </td>\
           				<td> '+parseFloat(product.price*parseInt(o.quantity,10)).toFixed(2)+' </td>\
@@ -96,6 +92,13 @@ function faceEnroll(image,id=null){
           		});
             }
 
+            items.unshift("<tr class='rowHeader'>\
+              <th> Item Name </th>\
+              <th> Price (RM) </th>\
+              <th> Qty </th>\
+            </tr>");
+
+            //alert(JSON.stringify(data) );
             $('.itemList2').html(items);
           });
 
