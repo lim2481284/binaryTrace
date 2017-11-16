@@ -24,6 +24,11 @@ function Api(){
   }
   this.getLastOrder = this.getLastOrder.bind(this);
 
+  this.getUserOrders = function(id, success){
+    $.get(this.url+'order',{customer_id:id,_order:'desc',_limit:5}).done((data)=>success(data));
+  }
+  this.getUserOrders = this.getUserOrders.bind(this);
+
   this.createOrder = function(data, success){
     POST(this.url+'order',data,(data)=>success(data));
   }
