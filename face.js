@@ -23,7 +23,9 @@ function faceDetect(image){
         }
         else if (response.Errors){
             console.log("No face");
-            $(document).trigger('captureFace');
+            $('.loader').fadeOut();
+            //$('.Failed').fadeIn();
+            trackingTask = tracking.track(video, tracker, { camera: true });
         }
     });
 }
@@ -53,8 +55,8 @@ function faceEnroll(image,id=null){
               var product = getProductById(o.product_id);
               items.push('<tr>\
                 <td> '+product.name+' </td>\
-                <td> '+o.quantity+' </td>\
                 <td> '+parseFloat(product.price*parseInt(o.quantity,10)).toFixed(2)+' </td>\
+                <td> '+o.quantity+' </td>\
               </tr>');
             });
           }
@@ -86,8 +88,8 @@ function faceEnroll(image,id=null){
           			var product = getProductById(o.product_id);
           			items.push('<tr>\
           				<td> '+product.name+' </td>\
-          				<td> '+o.quantity+' </td>\
           				<td> '+parseFloat(product.price*parseInt(o.quantity,10)).toFixed(2)+' </td>\
+                  <td> '+o.quantity+' </td>\
           			</tr>');
           		});
             }
